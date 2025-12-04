@@ -53,6 +53,19 @@ This project includes a fully functional demo application that showcases the sec
 *   **Rate Limiting**: Protection against Brute Force and DoS attacks.
 *   **Audit Logging**: Immutable logs for non-repudiation.
 
+## ✅ Security Testing Results (Proof of Concept)
+
+The following tests were executed against the demo application to validate the security controls. All tests **PASSED**.
+
+| Test Case | Vulnerability Tested | Result | Status |
+|:---|:---|:---|:---|
+| **TC-001** | SQL Injection | Blocked (401 Unauthorized) | ✅ PASS |
+| **TC-002** | Horizontal Priv Escalation | Blocked (403 Forbidden) | ✅ PASS |
+| **TC-003** | Vertical Priv Escalation | Blocked (403 Forbidden) | ✅ PASS |
+| **TC-004** | Cross-Site Scripting (XSS) | Sanitized (HTML Encoded) | ✅ PASS |
+| **TC-005** | Brute Force Protection | Rate Limited (429 Too Many Requests) | ✅ PASS |
+| **TC-006** | Session Security | HttpOnly & Secure Flags Present | ✅ PASS |
+
 ## 🇸🇦 Vision 2030 Alignment
 
 This framework directly supports the **Human Capability Development** and **Digital Government** programs by ensuring a secure, reliable, and trusted educational environment for over 6 million students.
