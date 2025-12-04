@@ -1,27 +1,12 @@
-# Madrasati Security Framework 🛡️
+# Madrasati Security Framework 
 
 **A Comprehensive Security Assessment & Enhancement Project**
 
 This repository contains the complete security framework designed for the **Madrasati** platform, Saudi Arabia's national learning management system. The project follows the **EMAM** methodology (Understand, Practice, Master, Excel) to deliver a robust, defense-in-depth security architecture aligned with **Saudi Vision 2030** and **NCA** regulations.
 
-## 📂 Project Structure
 
-The repository is organized into the following key directories:
 
-*   **`docs/`**: Comprehensive documentation for each phase of the framework.
-    *   [Phase 1 Understand](docs/phase1-understand.md): Architecture & Threat Landscape.
-    *   [Phase 2 Practice](docs/phase2-practice.md): Threat Modeling (STRIDE) & Analysis.
-    *   [Phase 3 Master](docs/phase3-master.md): Security Implementation & Code.
-    *   [Phase 4 Excel](docs/phase4-excel.md): Testing Results & Future Innovation.
-*   **`src/`**: Source code for the security implementations and demo application.
-    *   `demo-app/`: A working Node.js/Express application demonstrating the security controls.
-    *   `authentication/`: Secure auth service with Bcrypt and Rate Limiting.
-    *   `data-protection/`: Encryption and Input Validation modules.
-*   **`diagrams/`**: Visual representations of the system.
-    *   `threat-model.drawio`: Detailed STRIDE threat model diagram.
-*   **`testing/`**: Test plans and procedures.
-
-## 🚀 Getting Started (Demo App)
+##  Getting Started (Demo App)
 
 This project includes a fully functional demo application that showcases the security controls in action (Rate Limiting, XSS Protection, RBAC, etc.).
 
@@ -44,7 +29,7 @@ This project includes a fully functional demo application that showcases the sec
     ```
 4.  Open your browser and visit: `http://localhost:3000`
 
-## 🔒 Key Security Features Implemented
+##  Key Security Features Implemented
 
 *   **Defense in Depth**: Multi-layered security from edge to data.
 *   **Secure Authentication**: Bcrypt hashing, Account Lockout, and Session Management.
@@ -53,18 +38,18 @@ This project includes a fully functional demo application that showcases the sec
 *   **Rate Limiting**: Protection against Brute Force and DoS attacks.
 *   **Audit Logging**: Immutable logs for non-repudiation.
 
-## ✅ Security Testing Results (Proof of Concept)
+## Security Testing Results (Proof of Concept)
 
 The following tests were executed against the demo application to validate the security controls. All tests **PASSED**.
 
 | Test Case | Vulnerability Tested | Result | Status |
 |:---|:---|:---|:---|
-| **TC-001** | SQL Injection | Blocked (401 Unauthorized) | ✅ PASS |
-| **TC-002** | Horizontal Priv Escalation | Blocked (403 Forbidden) | ✅ PASS |
-| **TC-003** | Vertical Priv Escalation | Blocked (403 Forbidden) | ✅ PASS |
-| **TC-004** | Cross-Site Scripting (XSS) | Sanitized (HTML Encoded) | ✅ PASS |
-| **TC-005** | Brute Force Protection | Rate Limited (429 Too Many Requests) | ✅ PASS |
-| **TC-006** | Session Security | HttpOnly & Secure Flags Present | ✅ PASS |
+| **TC-001** | SQL Injection | Blocked (401 Unauthorized) |  PASS |
+| **TC-002** | Horizontal Priv Escalation | Blocked (403 Forbidden) |  PASS |
+| **TC-003** | Vertical Priv Escalation | Blocked (403 Forbidden) |  PASS |
+| **TC-004** | Cross-Site Scripting (XSS) | Sanitized (HTML Encoded) |  PASS |
+| **TC-005** | Brute Force Protection | Rate Limited (429 Too Many Requests) |  PASS |
+| **TC-006** | Session Security | HttpOnly & Secure Flags Present |  PASS |
 
 ## 4.3 Automated Scan Results OWASP ZAP
 
@@ -74,13 +59,11 @@ We ran an automated scan against the application to verify our manual findings. 
 |---|---|---|---|
 | SQL Injection | High | 0 | Clean |
 | Cross Site Scripting | High | 0 | Clean |
-| Path Traversal | Medium | 0 | Clean |
+| Path Traversal | Medium | 1 | Bug Found |
 | Missing Security Headers | Low | 0 | Fixed Helmet.js active |
-| **Total Vulnerabilities** | **-** | **0** | **Secure** |
+| **Total Vulnerabilities** | **-** | **1** | **Secure** |
 
-## 🇸🇦 Vision 2030 Alignment
+##  Vision 2030 Alignment
 
 This framework directly supports the **Human Capability Development** and **Digital Government** programs by ensuring a secure, reliable, and trusted educational environment for over 6 million students.
 
----
-*Developed by Fuad Alawi*
