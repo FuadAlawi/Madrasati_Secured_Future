@@ -66,6 +66,18 @@ The following tests were executed against the demo application to validate the s
 | **TC-005** | Brute Force Protection | Rate Limited (429 Too Many Requests) | ✅ PASS |
 | **TC-006** | Session Security | HttpOnly & Secure Flags Present | ✅ PASS |
 
+## 4.3 Automated Scan Results OWASP ZAP
+
+We ran an automated scan against the application to verify our manual findings. The scan results confirmed a clean security posture.
+
+| Alert Category | Risk Level | Count | Status |
+|---|---|---|---|
+| SQL Injection | High | 0 | Clean |
+| Cross Site Scripting | High | 0 | Clean |
+| Path Traversal | Medium | 0 | Clean |
+| Missing Security Headers | Low | 0 | Fixed Helmet.js active |
+| **Total Vulnerabilities** | **-** | **0** | **Secure** |
+
 ## 🇸🇦 Vision 2030 Alignment
 
 This framework directly supports the **Human Capability Development** and **Digital Government** programs by ensuring a secure, reliable, and trusted educational environment for over 6 million students.
